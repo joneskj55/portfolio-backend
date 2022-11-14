@@ -1,11 +1,11 @@
 const express = require("express");
 const router = express.Router();
 
-const visitorSchema = require("../models/visitor");
+const Visitor = require("../models/visitor");
 
 // create visitor
 router.route("/create-visitor").post((req, res, next) => {
-  visitorSchema.create(req.body, (error, data) => {
+  Visitor.create(req.body, (error, data) => {
     if (error) {
       return next(error);
     } else {
@@ -17,7 +17,7 @@ router.route("/create-visitor").post((req, res, next) => {
 
 // get list of visitors
 router.route("/").get((req, res) => {
-  visitorSchema.find((error, data) => {
+  Visitor.find((error, data) => {
     if (error) {
       return next(error);
     } else {
