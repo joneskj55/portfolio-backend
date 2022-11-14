@@ -1,0 +1,7 @@
+.DS_Store
+.idea/
+node_modules/
+server/node_modules/
+src/.DS_Store
+.env
+.vercel
