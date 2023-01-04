@@ -6,6 +6,11 @@ const ProjectSchema = new Schema(
     title: { type: String, required: true },
     description: { type: String, required: true },
     url: { type: String, required: true },
+    tech: { type: Array },
+    year: { type: String },
+    deployed: { type: Array },
+    repo: { type: String },
+    img: { type: String },
   },
   {
     collection: "projects",
