@@ -11,6 +11,7 @@ const ProjectSchema = new Schema(
     deployed: { type: Array },
     repo: { type: String },
     img: { type: String },
+    private: { type: Boolean, default: false, required: false },
   },
   {
     collection: "projects",
